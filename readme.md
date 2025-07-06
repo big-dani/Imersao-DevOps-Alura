@@ -68,5 +68,6 @@ gcloud run deploy --port=8000
 
 - O banco de dados SQLite será criado automaticamente como `escola.db` na primeira execução.
 - Para reiniciar o banco, basta apagar o arquivo `escola.db` (isso apagará todos os dados).
+- Confira a API em funcionamento: https://api-bigdani-679533949853.southamerica-east1.run.app/docs#/
 
 ---
