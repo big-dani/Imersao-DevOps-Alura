@@ -1,0 +1,19 @@
+services:
+  api:
+    # Constrói a imagem Docker a partir do Dockerfile no diretório atual.
+    build: .
+    container_name: imersao_alura_api
+
+
+    # Mapeia a porta 8000 do seu computador para a porta 8000 do contêiner,
+    # permitindo o acesso à API via http://localhost:8000.
+    ports:
+      - "8000:8000"
+
+    # Monta o diretório do projeto local dentro do contêiner.
+    # Isso tem dois benefícios principais:
+    # 1. O banco de dados SQLite (escola.db) será salvo no seu computador, e os dados não serão perdidos.
+    # 2. As alterações no código são refletidas instantaneamente no contêiner, permitindo o hot-reload.
+    volumes:
+      - .:/app
+
